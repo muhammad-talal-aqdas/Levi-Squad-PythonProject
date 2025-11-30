@@ -1,0 +1,17 @@
+import random
+play = "yes"
+while play.lower() == "yes":
+    number = random.randint(1, 50)
+    guess = 0
+    attempts = 0
+    while guess != number:
+        guess = int(input("Enter your guess: "))
+        attempts += 1
+        if guess > number:
+            print("Too high")
+        elif guess < number:
+            print("Too low")
+        else:
+            print("Correct! Attempts:", attempts)
+    play = input("Play again? (yes/no): ")
+print("Game over")
